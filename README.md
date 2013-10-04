@@ -54,6 +54,20 @@ client.debit(:reference_number => "my-debit-reference",
              :consumer_id => consumer_id)
 ```
 
+Retrieve a specific consumer profile.
+
+``` ruby
+client.list_consumer(:consumer_id => "xxxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxxxx")
+```
+
+Retrieve all consumer profiles.
+
+``` ruby
+client.list_consumer
+```
+
+Read the source code and API documentation for other API calls.
+
 ## Development
 
 Enable debug with:
