@@ -50,6 +50,13 @@ module CheckGateway
       response = request(:cancel, params)
     end
 
+    def status(options={})
+      params = {}
+      params.merge!("ReferenceNumber" => options[:reference_number]) if options[:reference_number]
+      params.merge!("TransactionID" => options[:transaction_id]) if options[:transaction_id]
+      response = request(:status, params)
+    end
+
     private
     def request(action, params={})
       params.merge!({ "Method" => action.to_s.capitalize,
