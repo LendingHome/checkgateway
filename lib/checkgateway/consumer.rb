@@ -75,7 +75,7 @@ module CheckGateway
           xml.Birthday          options[:birthday]                if options[:birthday] # "M/D/YYYY"
           xml.SSN               options[:ssn]                     if options[:ssn] # Format can be "123456789" or "123-45-6789" or "6789".
           xml.SECCode           options[:sec_code]                if options[:sec_code]
-          xml.CoNo              options[:company_number]
+          xml.CoNo              options[:company_number]          if options[:company_number]
           xml.Notes             options[:notes]                   if options[:notes]
         end
       end
